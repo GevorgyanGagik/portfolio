@@ -1,0 +1,144 @@
+/* VARIABLE STYLES */
+
+:root {
+  --green-color: #8bff85;
+  --white-color: #ffffff;
+  --green-text: #6ae363;
+
+  --headline-size: 43px;
+  --headline-weight: 700;
+}
+
+/* DEFAULT STYLES */
+
+* {
+  margin: 0;
+  padding: 0;
+  transition: 300ms;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+abbr {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+p {
+  line-height: 2;
+  font-size: 20px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  font-size: 14px;
+  padding: 15px 35px;
+  &:hover {
+    opacity: 0.8;
+    .arrow {
+      display: inline-block;
+      transform: rotate(-50deg);
+    }
+  }
+  @media (max-width: 768px) {
+    font-size: 11px;
+    padding: 11px 30px;
+  }
+}
+
+/* APP STYLES */
+
+.App {
+  overflow: hidden;
+  @media (max-width: 700px) {
+    p,
+    a {
+      font-size: 18px !important;
+    }
+    .title {
+      font-size: 35px;
+    }
+  }
+}
+
+.black__btn {
+  background: rgba(33, 33, 35, 1);
+  color: #fff;
+  text-align: center;
+  font-family: "Cera Pro";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 21.6px */
+}
+
+.green__btn {
+  background-color: var(--green-color);
+  color: #000;
+  text-align: center;
+  font-family: "Cera Pro";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 21.6px */
+}
+
+/* GROUP STYLES */
+
+.title {
+  font-size: var(--headline-size);
+  font-weight: var(--headline-weight);
+}
+
+.green__headline {
+  color: var(--green-color);
+}
+
+.btns {
+  gap: 5px;
+  display: flex;
+}
+
+.descs {
+  display: flex;
+  row-gap: 50px;
+  flex-direction: column;
+}
+
+.container {
+  margin: auto;
+  max-width: 1530px;
+}
+
+/* SCROLLBAR STYLES */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--green-color);
+}
+
+/* NOTHING FOUND STYLES */
+
+.nothing {
+  inset: 0;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-color);
+  background-color: rgba(26, 32, 44);
+}

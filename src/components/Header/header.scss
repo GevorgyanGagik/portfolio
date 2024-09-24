@@ -1,0 +1,115 @@
+.header-nav {
+  gap: 20px;
+  font-size: 14px;
+  display: flex;
+}
+
+.header {
+  width: 100%;
+  padding: 27px 100px;
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+    .header__logo {
+      color: #000;
+      font-family: "Cera Pro";
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
+      @media (max-width: 768px) {
+        font-size: 28px;
+      }
+    }
+    .header__content {
+      display: flex;
+      align-items: center;
+      column-gap: 60px;
+      @media (max-width: 1220px) {
+        display: none;
+      }
+
+      li {
+        position: relative;
+        &::before {
+          content: "";
+          transition: 500ms;
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 0%;
+          height: 1px;
+          background-color: black;
+        }
+        &:hover::before {
+          width: 100%;
+        }
+        a {
+          color: #000;
+          font-family: "Cera Pro";
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 120%; /* 21.6px */
+        }
+      }
+    }
+    .header__hamburger {
+      display: none;
+      @media (max-width: 1100px) {
+        display: flex;
+      }
+    }
+    .header__btns {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+    }
+    .modal {
+      inset: 0;
+      z-index: 3;
+      position: fixed;
+      animation-name: modal;
+      animation-duration: 300ms;
+      background-color: rgba(255, 255, 255, 0.9);
+      @keyframes modal {
+        0% {
+          transform: translate(-300px);
+        }
+        100% {
+          transform: translate(0);
+        }
+      }
+      .modal__desc {
+        height: 100vh;
+        display: flex;
+        padding-top: 10%;
+        flex-direction: column;
+        li {
+          cursor: pointer;
+          line-height: 2;
+          font-size: 40px;
+          padding: 0 30px;
+          letter-spacing: 5px;
+          &:hover {
+            background-color: #e4e4e483;
+          }
+        }
+      }
+      .modal__brg {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .header {
+    padding: 20px;
+    .header__btns {
+      display: none !important;
+    }
+  }
+}

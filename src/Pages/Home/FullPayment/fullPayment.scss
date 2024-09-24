@@ -1,0 +1,146 @@
+.full__payment {
+  padding: 5%;
+  .full__paymnet__desc {
+    row-gap: 15px;
+    p {
+      font-size: 30px;
+    }
+  }
+  .full__payment__btns {
+    @media (max-width: 800px) {
+      button {
+        display: none;
+      }
+      .first {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+      }
+    }
+    button {
+      width: 16.66%;
+      font-size: 18px;
+      font-weight: 500;
+      background-color: var(--white-color);
+      border: 1px solid var(--green-color);
+    }
+  }
+
+  .full__payment__btns > button:hover,
+  .first {
+    opacity: unset;
+    background: linear-gradient(90deg, #308050 0%, #14171d 100%);
+    color: #6ae363;
+  }
+  .full__payment__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 2px;
+    margin: 35px 0;
+    .full__payment__content__squre {
+      min-height: 373px;
+      padding: 20px;
+      width: 49%;
+      position: relative;
+      border-radius: 25px;
+      background: url("https://payxtoday.com/images/full_card_bg_left.png"),
+        url("https://payxtoday.com/images/full_card_bg_left.png");
+      box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
+      .slider {
+        display: none;
+      }
+      @media (max-width: 1150px) {
+        width: 100%;
+      }
+      img {
+        margin: 0 0 8% 14%;
+        width: 70%;
+      }
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.55);
+        .arrow {
+          display: inline-block;
+          transform: rotate(-50deg);
+        }
+      }
+      .api__img {
+        margin: 8% 0 0 28%;
+        width: 229px;
+        height: 225px;
+        @media (max-width: 500px) {
+          margin-left: 15%;
+        }
+      }
+      .full__pay__images {
+        display: flex;
+        padding: 31px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        img {
+          width: 70px;
+          height: 70px;
+        }
+        p {
+          width: 100px;
+          font-size: 16px;
+          text-align: center;
+        }
+      }
+      .full__pay__images__anim {
+        width: 300px;
+        height: 161px;
+        position: relative;
+        overflow: hidden;
+        margin: 35px auto;
+        .card__img {
+          left: -50px;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+        }
+        .card__img__sec {
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 171px;
+          animation-name: card;
+          animation-duration: 3s;
+          animation-timing-function: ease;
+          animation-direction: alternate;
+          animation-iteration-count: infinite;
+          @keyframes card {
+            0% {
+              transform: translate(-190px);
+            }
+            100% {
+              transform: translate(-47px);
+            }
+          }
+        }
+      }
+    }
+  }
+  .full__payment__content__squre__desc {
+    position: absolute;
+    bottom: 15px;
+    width: 90%;
+    p {
+      opacity: 0.7;
+      font-size: 17px;
+    }
+    .arrow {
+      right: 0;
+      bottom: 0;
+      width: 70px;
+      height: 70px;
+      font-size: 30px;
+      padding: 10px 20px;
+      position: absolute;
+      background: linear-gradient(90deg, #b3ff6a 0%, #75ffc9 100%);
+    }
+  }
+}

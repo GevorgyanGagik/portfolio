@@ -1,0 +1,69 @@
+.proud__container {
+  color: white;
+  gap: 40px;
+  max-width: 100vw;
+  color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  padding: 6% 0;
+  background-repeat: no-repeat;
+  border-top-right-radius: 150px;
+  background-image: url("https://payxtoday.com/images/proudly_bg.png");
+  @media (max-width: 600px) {
+    padding: 20% 10%;
+    padding-bottom: unset;
+  }
+  .title {
+    padding: 0 5%;
+  }
+  .tracks {
+    width: 100vw;
+    overflow: hidden;
+    .track {
+      margin: 10px 0;
+      display: flex;
+      gap: 10px;
+      img {
+        width: 246px;
+        height: 113px;
+        border-radius: 25px;
+      }
+    }
+    .right {
+      transform: translate(100px);
+      animation-name: right;
+      animation-duration: 20s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      @keyframes right {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-100% - 40px));
+        }
+      }
+    }
+    .left {
+      animation-name: left;
+      animation-duration: 20s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      @keyframes left {
+        0% {
+          transform: translate(calc(-100% - 40px));
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+  @media (max-width: 800px) {
+    padding: unset;
+    .title {
+      padding: 15% 10% 0 10%;
+      font-size: 30px;
+    }
+  }
+}

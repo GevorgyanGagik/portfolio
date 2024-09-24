@@ -1,0 +1,106 @@
+.payments {
+  width: 100%;
+  padding: 26px 20px;
+  .globe__img {
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+  }
+  .payments__desc {
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    column-gap: 20px;
+    @media (max-width: 1300px) {
+      flex-direction: column;
+      row-gap: 40px;
+    }
+    .payments__title {
+      display: flex;
+      flex-direction: column;
+      row-gap: 22px;
+      h1 {
+        max-width: 670px;
+        color: var(--dark_grey, #212123);
+        font-size: 48px;
+      }
+      p {
+        max-width: 694px;
+        color: #000;
+        font-family: "Cera Pro";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+      }
+      div {
+        margin-top: 25px;
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        @media (max-width: 520px) {
+          flex-direction: column;
+          row-gap: 8px;
+          align-items: flex-start;
+        }
+      }
+    }
+    img {
+      width: 100%;
+      max-width: 696px;
+    }
+  }
+  .payments__section__info {
+    gap: 20px;
+    display: flex;
+    padding: 50px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    .first {
+      color: var(--white-color);
+      background-color: #212123;
+    }
+    .second {
+      color: var(--green-text);
+      border: solid 1px #48bf41;
+      background-color: var(--white-color);
+    }
+    .third {
+      background-color: #c4fb99;
+    }
+    .fourth {
+      box-shadow: 1px 1px 3px 0;
+      background-color: var(--white-color);
+    }
+  }
+}
+
+.cube {
+  gap: 15px;
+  width: 340px;
+  height: 200px;
+  display: flex;
+  padding: 55px 40px;
+  border-radius: 50px;
+  font-size: 23px;
+  .cube__img {
+    width: 55px;
+    height: 55px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .cube__headline h2 {
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 40px;
+    margin-bottom: 15px;
+  }
+  @media (max-width: 730px) {
+    width: 100%;
+  }
+}

@@ -1,0 +1,56 @@
+.experience {
+  padding: 40px 20px;
+  .experience__container {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .bcg__color {
+      width: 610px;
+      height: 800px;
+      margin-left: -45px;
+      background-position: -100px;
+      border-radius: 0 35% 35% 0;
+      position: relative;
+      background-image: url("https://payxtoday.com/images/customer_Ellipse1.svg");
+      .icons {
+        width: 70px;
+        height: 133px;
+        animation: icon;
+        position: absolute;
+        animation-duration: 2.5s;
+        animation-direction: alternate;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+        @keyframes icon {
+          0% {
+            transform: translateY(0);
+          }
+          100% {
+            transform: translateY(30px);
+          }
+        }
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        background-position: 0;
+        background-image: url("https://payxtoday.com/images/customer__map.svg");
+      }
+    }
+    .costumer__exp__desc {
+      width: 55%;
+    }
+    @media (max-width: 900px) {
+      flex-direction: column-reverse;
+      .costumer__exp__desc,
+      img {
+        width: unset;
+      }
+    }
+  }
+}

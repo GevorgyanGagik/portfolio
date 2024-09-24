@@ -1,0 +1,32 @@
+.approve__container {
+  gap: 20px;
+  padding: 40px 80px;
+  display: flex;
+  align-items: center;
+  background-position: 55vw;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 18px 8px #fff inset;
+  background-image: url("https://payxtoday.com/images/approve__ellipse1.png");
+  .approve__desc {
+    width: 55%;
+  }
+  .image {
+    height: 643px;
+    max-width: 605px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .approve__container {
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    .approve__desc {
+      width: unset;
+    }
+  }
+}
